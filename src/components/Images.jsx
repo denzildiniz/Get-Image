@@ -1,11 +1,15 @@
+import React from 'react'
+// import { Box } from '@material-ui/core'
 
-
+import Image from './Image'
 
 const Images = ({data}) => {
     return (
-       data.map(image =>{
-           return console.log(image);
-       })
+        <div>
+            { data && data.map(img =>(
+                <Image img={img} />
+            ))}
+        </div>
     )
 }
 

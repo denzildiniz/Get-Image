@@ -5,7 +5,7 @@ import UserInput from './components/UserInput';
 import Images from "./components/Images";
 import {getImages} from './services/api';
 
-import { Box , makeStyles} from '@material-ui/core';
+import { Box } from '@material-ui/core';
 
 import './App.css';
 
