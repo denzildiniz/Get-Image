@@ -6,7 +6,7 @@ import Images from "./components/Images";
 import SnackBar from './components/SnackBar';
 import {getImages} from './services/api';
 
-import { Box, LinearProgress } from '@material-ui/core';
+import { Box, LinearProgress , makeStyles } from '@material-ui/core';
 
 import './App.css';
 
@@ -47,12 +47,19 @@ function App() {
     setcount(count);
   }
 
+  const useStyles = makeStyles({
+    view : {
+      visibility : 'hidden',
+    },
+  })
+
+  const classes = useStyles()
   return (
     <Box>
       <Navbar />
       {progress === true ?
         <LinearProgress /> :
-        <LinearProgress color="transparent" />
+        <LinearProgress className = {classes.view}/>
       }
       <UserInput userInputHandler={userInputHandler} userCountHandler={userCountHandler} />
       <Images data={data} />
